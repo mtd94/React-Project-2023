@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 const Header = () => {
     return (
 <div className="allcontain">
@@ -29,14 +31,9 @@ const Header = () => {
 		</div>
 		<div className="collapse navbar-collapse" id="upmenu">
 			<ul className="nav navbar-nav" id="navbarontop">
-				<li className="active"><a href="#">HOME</a> </li>
-				<li className="dropdown">
-					<a href="#" className="dropdown-toggle"	data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATALOG <span className="caret"></span></a>
-					<ul className="dropdown-menu dropdowncostume">
-						<li><a href="#">Sport</a></li>
-						<li><a href="#">Old</a></li>
-						<li><a href="#">New</a></li>
-					</ul>
+				<li className="active"><a href="/">HOME</a> </li>
+				<li className="active">
+					<a href="#" className="catalog"	role="button" aria-haspopup="true" aria-expanded="false">CATALOG <span className="caret"></span></a>
 				</li>
 				<li className="dropdown">
 						<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DEALERS <span className="caret"></span></a>
@@ -60,9 +57,7 @@ const Header = () => {
 			<div className="item active">
 				<img src="image/oldcar.jpg" alt="oldcar"/>
 				<div className="carousel-caption">
-					<h2>Porsche 356</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur ,<br/>
-						sed do eiusmod tempor incididunt ut labore </p>
+					
 				</div>
 			</div>
 			<div className="item">

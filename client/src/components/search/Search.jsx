@@ -1,5 +1,7 @@
+
 const Search = () => {
     return (
+		<nav className="navbar navbar-default midle-nav">
         <div>
         <div className="navbar-header">
 				<button type="button" className="navbar-toggle collapsed textcostume" data-toggle="collapse" data-target="#navbarmidle" aria-expanded="false">
@@ -43,7 +45,7 @@ const Search = () => {
 						</ul>
 					</li>
 					<li className="li-slideprice">
-						<p> <label className="slidertxt" for="amount">Price </label>
+						<p> <label className="slidertxt" htmlFor="amount">Price </label>
 							<input className="priceslider" type="text" id="amount" readonly="readonly"/>
 						</p>
 							<div id="slider-range"></div>
@@ -53,6 +55,7 @@ const Search = () => {
 				</ul>
 			</div>
             </div>
+			</nav>
     );
 }
 export default Search;
