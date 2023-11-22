@@ -16,6 +16,7 @@ const Header = () => {
 			<ul className="logreg">
 				<li><a href="#">Login </a> </li>
 				<li><a href="#"><span className="register">Register</span></a></li>
+				<li><a href="#"><span className="user">user</span></a></li>
 			</ul>
 	</div>
 		<div className="container">
@@ -32,22 +33,15 @@ const Header = () => {
 		<div className="collapse navbar-collapse" id="upmenu">
 			<ul className="nav navbar-nav" id="navbarontop">
 				<li className="active"><a href="/">HOME</a> </li>
-				<li className="active">
-					<a href="#" className="catalog"	role="button" aria-haspopup="true" aria-expanded="false">CATALOG <span className="caret"></span></a>
+				<li className="active"><a href="#" className="catalog">CATALOG </a>
 				</li>
 				<li className="dropdown">
-						<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DEALERS <span className="caret"></span></a>
-						<ul className="dropdown-menu dropdowncostume">
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="3">3</a></li>
-						</ul>
+						<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sell Cars</a>
 				</li>
 				<li>
-					<a href="contact.html">CONTACT</a>
+					<a href="#">Create car</a>
  
 				</li>
-				<button><span className="postnewcar">POST NEW CAR</span></button>
 			</ul>
 		</div>
 
@@ -65,14 +59,6 @@ const Header = () => {
 				<div className="carousel-caption">
 					<h2>Porche</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur ,<br/>
-						sed do eiusmod tempor incididunt ut labore </p>
-				</div>
-			</div>
-			<div className="item">
-				<img src="image/benz.jpg" alt="benz"/>
-				<div className="carousel-caption">
-					<h2>Car</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur ,<br/>
 						sed do eiusmod tempor incididunt ut labore </p>
 				</div>
 			</div>
