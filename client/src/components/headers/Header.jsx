@@ -14,9 +14,8 @@ const Header = () => {
 				<li>Give us a call : +66666666 </li>
 			</ul>
 			<ul className="logreg">
-				<li><a href="#">Login </a> </li>
-				<li><a href="#"><span className="register">Register</span></a></li>
-				<li><a href="#"><span className="user">user</span></a></li>
+				<li><Link to="/login">Login</Link></li>
+				<li><Link to="/register">Register</Link></li>
 			</ul>
 	</div>
 		<div className="container">
@@ -27,21 +26,16 @@ const Header = () => {
 					<span className="icon-bar"></span>
 					<span className="icon-bar"></span>
 				</button>
-				<a className="navbar-brand logo" href="#"><img src="image/logo1.png" alt="logo"/></a>
+
 			</div>	 
 		</div>
 		<div className="collapse navbar-collapse" id="upmenu">
 			<ul className="nav navbar-nav" id="navbarontop">
-				<li className="active"><a href="/">HOME</a> </li>
-				<li className="active"><a href="#" className="catalog">CATALOG </a>
-				</li>
-				<li className="dropdown">
-						<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sell Cars</a>
-				</li>
-				<li>
-					<a href="#">Create car</a>
- 
-				</li>
+				<li><Link to="/">HOME</Link></li>
+				<li><Link to="/catalog">CATALOG </Link></li>
+				<li><Link to="/search">SEARCH</Link></li>
+				<li><Link to="/create-car">Create car</Link></li>
+				
 			</ul>
 		</div>
 </div>

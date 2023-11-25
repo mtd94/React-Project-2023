@@ -1,11 +1,11 @@
-const Create = () => {
+const Edit = () => {
     return (
         <div className="allcontain">
-	<div className="create-car">
+	<div className="edit-car">
 		<div className="newslettercontent">
 			<div className="leftside">
 					<div className="create-form">
-						<h1>Create car</h1>
+						<h1>Edit car</h1>
 							<div className="form-group group-coustume">
 								<input type="text" className="form-control name-form" placeholder="Model"/>
 								<input type="text" className="form-control email-form" placeholder="Color"/>
@@ -20,4 +20,4 @@ const Create = () => {
                     </div>
     )
 }
-export default Create;
+export default Edit;
