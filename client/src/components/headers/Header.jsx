@@ -1,6 +1,12 @@
 import {Link} from 'react-router-dom';
+import {AuthContext} from '../../context/authContext';
 
 const Header = () => {
+	const {
+        isAuthenticated,
+        email,
+    } = useContext(AuthContext);
+
     return (
 <div className="allcontain">
 	<div className="header">
@@ -16,6 +22,7 @@ const Header = () => {
 			<ul className="logreg">
 				<li><Link to="/login">Login</Link></li>
 				<li><Link to="/register">Register</Link></li>
+				<li><Link to="/logout">Logout</Link></li>
 			</ul>
 	</div>
 		<div className="container">
@@ -30,14 +37,15 @@ const Header = () => {
 			</div>	 
 		</div>
 		<div className="collapse navbar-collapse" id="upmenu">
+		
 			<ul className="nav navbar-nav" id="navbarontop">
 				<li><Link to="/">HOME</Link></li>
 				<li><Link to="/catalog">CATALOG </Link></li>
 				<li><Link to="/search">SEARCH</Link></li>
 				<li><Link to="/create-car">Create car</Link></li>
-				
 			</ul>
 		</div>
+					
 </div>
     )
 }

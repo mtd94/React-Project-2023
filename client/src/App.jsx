@@ -22,6 +22,7 @@ function App() {
     <Route path="/create-car" element={<Create/>} />
     <Route path="/login" element={<Login/>} />
     <Route path="/register" element={<Register/>} />
+    <Route path="/logout" element={<Logout/>} />
    
     
 
