@@ -1,5 +1,8 @@
 
 import { Routes, Route } from 'react-router-dom';
+
+import { AuthProvider } from '../src/context/authContext';
+
 import Header from '../src/components/headers/Header'
 import Home from '../src/components/home/Home';
 import Search  from '../src/components/search/Search';
@@ -7,10 +10,11 @@ import Catalog from '../src/components/catalog/Catalog'
 import Create from '../src/components/car-create/Create'
 import Register from './components/register/Register';
 import Login from './components/login/Login';
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
+    <AuthProvider>
     <div id='container'>
     <Header/>
 
@@ -22,13 +26,14 @@ function App() {
     <Route path="/create-car" element={<Create/>} />
     <Route path="/login" element={<Login/>} />
     <Route path="/register" element={<Register/>} />
-    <Route path="/logout" element={<Logout/>} />
    
     
 
     </Routes>
     <Footer/>
     </div>
+    </AuthProvider>
+
   )
 }
 

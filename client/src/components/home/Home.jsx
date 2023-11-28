@@ -7,15 +7,12 @@ const Home = () => {
 			<div className="item active">
 				<img src="image/oldcar.jpg" alt="oldcar"/>
 				<div className="carousel-caption">
-					
 				</div>
 			</div>
 			<div className="item">
 				<img src="image/porche.jpg" alt="porche"/>
 				<div className="carousel-caption">
-					<h2>Porche</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur ,<br/>
-						sed do eiusmod tempor incididunt ut labore </p>
+					<h2>Ferrari Dino </h2>
 				</div>
 			</div>
 		</div>

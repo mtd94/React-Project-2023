@@ -1,12 +1,6 @@
 import {Link} from 'react-router-dom';
-import {AuthContext} from '../../context/authContext';
 
 const Header = () => {
-	const {
-        isAuthenticated,
-        email,
-    } = useContext(AuthContext);
-
     return (
 <div className="allcontain">
 	<div className="header">

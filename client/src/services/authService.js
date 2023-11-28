@@ -1,4 +1,4 @@
-import {req} from '../lib/req';
+import request from '../lib/request';
 
 const baseUrl = 'http://localhost:3030/users';
 

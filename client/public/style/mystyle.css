@@ -384,7 +384,7 @@ font-size: 10pt;
 	padding-left: 40px;
 }
 .midle-nav{
-	background: rgba(248,199,45,.8);
+	background: rgba(7, 7, 7, 0.8);
  	border: 0px;
  	position: absolute;
  	bottom: 0px;
@@ -515,7 +515,7 @@ font-size: 10pt;
 	background-color: none;
 	font-size: 13pt;
 	color: #fff;
-	padding-top: 20px;
+	padding-top: 55px;
 }
 .btn-costume{
 	border-radius: 0px;

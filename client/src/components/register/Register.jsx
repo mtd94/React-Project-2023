@@ -1,3 +1,7 @@
+import { useContext } from "react";
+
+import AuthContext from "../../context/authContext";
+import form from "../../hooks/form";
 
 const Register = () => {
     return (

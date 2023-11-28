@@ -1,31 +1,32 @@
-const Catalog = () => {
+import { useEffect, useState } from 'react';
+
+import * as carService from '../../services/carService';
+import CarCard from './car-card/CarCard';
+
+export default function CarList() {
+    const [cars, setCars] = useState([]);
+
+    useEffect(() => {
+        carService.getAll()
+            .then(result => setCars(result))
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
-        <div className="allcontain">
-	<div className="catalog">
-		<h1 className="text-center"><span className="bdots"></span>CATALOG</h1>
+        <div class="cars">
+	<div class="feturedsection">
+		<h1 class="text-center">CATALOG</h1>
 	</div>
-	<div className="feturedimage">
-		<div className="row firstrow">
-			<div className="col-lg-6 costumcol colborder1">
-				<div className="row costumrow">
-					<div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 img1colon">
-						<img src="image/featurporch.jpg" alt="porsche"/>
-					</div>
-					<div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 txt1colon ">
-						<div className="featurecontant">
-							<h1>LOREM IPSUM</h1>
-							<p>Color: Grey</p>
-			 				<h2>Price: 23345 &euro;</h2>
-			 				<button id="btn" onclick="rmtxt()">DETAILS</button>
-							 
-			 				</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+            {cars.map(car => (
+                <CarCard key={car._id} {...car} />
+            ))}
+
+            {cars.length === 0 && (
+                <h4 className="no-elements">NO CAR COLLECTION FOUND...</h4>
+            )}
             </div>
-            </div>
-           
-    )
+    );
 }
-export default Catalog;
