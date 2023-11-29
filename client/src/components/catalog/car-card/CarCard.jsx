@@ -5,16 +5,16 @@ export default function CarCard  ({
     model,
     color,
     price,
-    image
+    imageUrl
 }) {
     return(
     
         <div className="all-cars">
             <div className="allcars-info">
-                <img src={image} />
-                <h6>{model}</h6>
-                <h2>{color}</h2>
-                <h2>{price}</h2>
+                <img src={imageUrl} />
+                <h1>Model:{model}</h1>
+                <h2>Color:{color}</h2>
+                <h2>Price:{price}$</h2>
                 <Link to={`/cars/${_id}`} className="details-button">Details</Link>
             </div>
         </div>

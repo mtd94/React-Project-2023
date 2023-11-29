@@ -11,10 +11,9 @@ const Create = () => {
 
         try {
             await carService.create(carData);
-
             navigate('/catalog');
         } catch (err) {
-        alert(console.err)
+        console.log(err)
         }
     }
 
@@ -27,7 +26,7 @@ const Create = () => {
 								<input type="text" className="form-control model-form" placeholder="Model"/>
 								<input type="text" className="form-control color-form" placeholder="Color"/>
 								<input type="text" className="form-control price-form" placeholder="Price"/>
-								<input type="text" className="form-control image-form" placeholder="Image"/>
+								<input type="text" className="form-control image-form" placeholder="ImageUrl"/>
 								<input className="btn submit" type="submit" value="Create Car" />
 							</div>
 					

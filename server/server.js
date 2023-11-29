@@ -1642,8 +1642,19 @@
     			_createdOn: 1616237272948,
     			_updatedOn: 1616237293676
     		}
-    	}
-    };
+    },
+    cars: {
+        "cc9b0a0f-655d-45d7-9857-0a61c6bb2c44": {
+            _id:"60f0cf0b-34b0-4abd-97e9-8c42f830dfewc",
+            model: "BMW",
+            color: "red",
+            price: "40000",
+            imageUrl: "https://bmw-mcar.bg/files/cars/bmw5.png?dbc1548046"
+
+
+}
+    }
+};
     var rules$1 = {
     	users: {
     		".create": false,
