@@ -1,7 +1,7 @@
 import * as carService from '../../services/carService'
 import { useNavigate } from 'react-router-dom';
 
-const Create = () => {
+export default function Create () {
 	const navigate = useNavigate();
     
     const createCarSubmitHandler = async (e) => {
@@ -36,4 +36,3 @@ const Create = () => {
                     </div>
     )
 }
-export default Create;

@@ -1,6 +1,11 @@
 import {Link} from 'react-router-dom';
+import { useContext } from 'react';
+import AuthContext from '../../context/authContext'
 
-const Header = () => {
+export default function Header () {
+	const {isAuthenticated,
+} = useContext(AuthContext);
+
     return (
 <div className="allcontain">
 	<div className="header">
@@ -16,7 +21,9 @@ const Header = () => {
 			<ul className="logreg">
 				<li><Link to="/login">Login</Link></li>
 				<li><Link to="/register">Register</Link></li>
+				{!isAuthenticated && (
 				<li><Link to="/logout">Logout</Link></li>
+)}
 			</ul>
 	</div>
 		<div className="container">
@@ -35,12 +42,16 @@ const Header = () => {
 			<ul className="nav navbar-nav" id="navbarontop">
 				<li><Link to="/">HOME</Link></li>
 				<li><Link to="/catalog">CATALOG </Link></li>
+
+				{!isAuthenticated && (
 				<li><Link to="/search">SEARCH</Link></li>
+				)}
+				{!isAuthenticated && (
 				<li><Link to="/create-car">Create car</Link></li>
+				)}
 			</ul>
 		</div>
 					
 </div>
     )
 }
-export default Header;

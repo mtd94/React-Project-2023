@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import * as AuthContext from "../../context/authContext";
-import form from "../../hooks/form";
+import useForm from "../../hooks/form";
 
 const RegisterFormKeys = {
   Email: 'email',
@@ -9,8 +9,8 @@ const RegisterFormKeys = {
   ConfirmPassword: 'confirm-password',
 }
 export default function Register () {
-  const { registerSubmitHandler } = useContext(AuthContext);
-  const { values, onChange, onSubmit } = form(registerSubmitHandler, {
+  const  registerSubmitHandler = useContext(AuthContext);
+  const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
       [RegisterFormKeys.Email]: '',
       [RegisterFormKeys.Password]: '',
       [RegisterFormKeys.ConfirmPassword]: '',
@@ -24,19 +24,22 @@ export default function Register () {
     <hr/>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" />
+    <input type="text" placeholder="Enter Email" name="email" id="email" 
 onChange={onChange}
 values={values[RegisterFormKeys.Email]}
+/>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" />
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" 
     onChange={onChange}
     values={values[RegisterFormKeys.Password]}
+    />
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" />
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" 
     onChange={onChange}
     values={values[RegisterFormKeys.ConfirmPassword]}
+    />
     <hr/>
 
     <button type="submit" className="registerbtn">Register</button>

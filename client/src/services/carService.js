@@ -1,6 +1,6 @@
 import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/data/'
+const baseUrl = 'http://localhost:3030/data/cars'
 
 export const getAll = async () => {
     const result = await request.get(baseUrl);
@@ -16,9 +16,7 @@ export const getOne = async (carId) => {
 
 export const getSearch = async () => {
     const query = new URLSearchParams({
-        // sortBy: `_createdOn desc`,
-        offset: 0,
-        pageSize: 3,
+        
     });
 
     const result = await request.get(`${baseUrl}?${query}`);
