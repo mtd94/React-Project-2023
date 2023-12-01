@@ -19,9 +19,13 @@ export default function Header () {
 				<li>Give us a call : +66666666 </li>
 			</ul>
 			<ul className="logreg">
+			{!isAuthenticated && (
 				<li><Link to="/login">Login</Link></li>
+			)}
+			{!isAuthenticated && (
 				<li><Link to="/register">Register</Link></li>
-				{!isAuthenticated && (
+			)}
+				{isAuthenticated && (
 				<li><Link to="/logout">Logout</Link></li>
 )}
 			</ul>
@@ -40,13 +44,13 @@ export default function Header () {
 		<div className="collapse navbar-collapse" id="upmenu">
 		
 			<ul className="nav navbar-nav" id="navbarontop">
+			
 				<li><Link to="/">HOME</Link></li>
 				<li><Link to="/catalog">CATALOG </Link></li>
-
-				{!isAuthenticated && (
+				{isAuthenticated && (
 				<li><Link to="/search">SEARCH</Link></li>
 				)}
-				{!isAuthenticated && (
+				{isAuthenticated && (
 				<li><Link to="/create-car">Create car</Link></li>
 				)}
 			</ul>

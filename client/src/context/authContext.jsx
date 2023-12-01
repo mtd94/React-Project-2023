@@ -13,8 +13,8 @@ export const AuthProvider = ({
     const [auth, setAuth] = usePersistedState('auth', {});
 
     const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.password);
-
+        const result = await authService.login(values.email,values.password);
+console.log(result)
         setAuth(result);
 
         localStorage.setItem('accessToken', result.accessToken);

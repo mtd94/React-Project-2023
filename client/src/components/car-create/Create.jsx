@@ -7,32 +7,39 @@ export default function Create () {
     const createCarSubmitHandler = async (e) => {
         e.preventDefault();
 
-        const carData = Object.fromEntries(new FormData(e.currentTarget));
+        const carData = Object.entries(new FormData(e.currentTarget));
 
         try {
-            await carService.create(carData);
+            await carService.create(carData)
             navigate('/catalog');
         } catch (err) {
-        console.log(err)
+        console.log(err,err.message)
         }
     }
 
     return (
+        <section id="create">
+            <form id="create" onSubmit={createCarSubmitHandler}>
         <div className="container">
-	            <form id="create" onSubmit={createCarSubmitHandler}>
-	<div className="create-car">
-						<h1>Create car</h1>
-							<div className="form-group group-coustume">
-								<input type="text" className="form-control model-form" placeholder="Model"/>
-								<input type="text" className="form-control color-form" placeholder="Color"/>
-								<input type="text" className="form-control price-form" placeholder="Price"/>
-								<input type="text" className="form-control image-form" placeholder="ImageUrl"/>
-								<input className="btn submit" type="submit" value="Create Car" />
-							</div>
-					
-                   
+                    <h1>Create Car</h1>
+                    <label htmlFor="model">Model:</label>
+                    <input type="text" id="model" name="model" placeholder="Audi.." />
+
+                    <label htmlFor="model">Year:</label>
+                    <input type="text" id="year" name="year" placeholder="Year.." />
+
+                    <label htmlFor="color">Color:</label>
+                    <input type="text" id="color" name="color" placeholder="White..." />
+
+                    <label htmlFor="price">Price:</label>
+                    <input type="number" id="price" name="price" min="1000" max="500000" placeholder="1000" />
+                       <p></p>
+                    <label htmlFor="img">Image:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
+
+                    <input className="btn submit" type="submit" value="Create" />
                     </div>
-					</form>
-                    </div>
+                    </form>
+                    </section>
     )
 }

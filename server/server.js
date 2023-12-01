@@ -1477,6 +1477,15 @@
     			_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
     		}
     	},
+        cars: {
+            "53d4dbf5-7f41-47ba-b485-43eccb91cb9": {
+    			model: "Audi A6",
+    			year: 2024,
+                color: "silver",
+    			price: 23555,
+    			imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/2018_Audi_A6_Sport_40_TDi_S-A_2.0.jpg/275px-2018_Audi_A6_Sport_40_TDi_S-A_2.0.jpg",
+        },
+    },
     	furniture: {
     	},
     	orders: {
@@ -1643,17 +1652,7 @@
     			_updatedOn: 1616237293676
     		}
     },
-    cars: {
-        "cc9b0a0f-655d-45d7-9857-0a61c6bb2c44": {
-            _id:"60f0cf0b-34b0-4abd-97e9-8c42f830dfewc",
-            model: "BMW",
-            color: "red",
-            price: "40000",
-            imageUrl: "https://bmw-mcar.bg/files/cars/bmw5.png?dbc1548046"
-
-
-}
-    }
+    
 };
     var rules$1 = {
     	users: {

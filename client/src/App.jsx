@@ -32,8 +32,8 @@ function App() {
     <Route path="/register" element={<Register/>} />
     <Route path='/logout' element={<Logout/>} />
     <Route path="*" element={<NotFound/>} />
-    <Route path="/catalog/:carId" element={<CarDetails />} />
-   <Route path="/catalog/:carId/edit" element={<Edit />} />
+    <Route path="/cars/:carId" element={<CarDetails />} />
+   <Route path="/cars/:carId/edit" element={<Edit />} />
     
 
     </Routes>
