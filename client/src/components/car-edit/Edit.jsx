@@ -8,6 +8,7 @@ export default function Edit ()  {
     const { carId } = useParams();
     const [car, setCar] = useState({
         model: '',
+        year: '',
         color: '',
         price: '',
         imageUrl: '',
@@ -45,14 +46,16 @@ export default function Edit ()  {
     return (
         <div className="allcontain">
 	<div className="edit-car">
-		<div className="newslettercontent">
-			<form id="create" onSubmit={editCarSubmitHandler}>
+			<form id="edit" onSubmit={editCarSubmitHandler}>
 						<h1>Edit car</h1>
 						<label htmlFor="leg-model">Model:</label>
                     <input type="text" id="model" name="model" value={car.model} onChange={onChange} placeholder="Enter car model..." />
 
+                    <label htmlFor="leg-model">Year:</label>
+                    <input type="text" id="year" name="year" value={car.year} onChange={onChange} placeholder="Enter car model..." />
+
                     <label htmlFor="color">Color:</label>
-                    <input type="text" id="color" name="category" value={car.color} onChange={onChange} placeholder="Enter car color..." />
+                    <input type="text" id="color" name="color" value={car.color} onChange={onChange} placeholder="Enter car color..." />
 
                     <label htmlFor="levels">Price:</label>
                     <input type="text" id="price" name="price" value={car.price} onChange={onChange} min="100" placeholder="100" />
@@ -63,6 +66,5 @@ export default function Edit ()  {
 					</form>
 					</div>
 					</div>
-					</div>
-    )
+                        )
 }

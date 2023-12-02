@@ -15,10 +15,9 @@ export default function CarList() {
     }, []);
 
     return (
-        <div class="cars">
-	<div class="feturedsection">
-		<h1 class="text-center">CATALOG</h1>
-	</div>
+        <section id="cars">
+        <div className="cars">
+		<h1 className="text-center">CATALOG</h1>
 
             {cars.map(car => (
                 <CarCard key={car._id} {...car} />
@@ -28,5 +27,6 @@ export default function CarList() {
                 <h4 className="no-elements">NO CAR COLLECTION FOUND...</h4>
             )}
             </div>
+            </section>
     );
 }

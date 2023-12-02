@@ -17,7 +17,7 @@ export default function CarCard  ({
                 <h2>Year:{year}</h2>
                 <h2>Color:{color}</h2>
                 <h2>Price:{price}$</h2>
-                <Link to={`/cars/${_id}`} className="details-button">Details</Link>
+                <button><Link to={`/catalog/${_id}/details`} className="details-button">Details</Link></button>
             </div>
         </div>
     )

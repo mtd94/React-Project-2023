@@ -15,11 +15,8 @@ export const getOne = async (carId) => {
 }
 
 export const getSearch = async () => {
-    const query = new URLSearchParams({
-        
-    });
 
-    const result = await request.get(`${baseUrl}?${query}`);
+    const result = await request.get(`${baseUrl}?where=${carId}`);
 
     return result;
 }
@@ -36,4 +33,4 @@ export const edit = async (carId, carData) => {
     return result;
 };
 
-export const remove = async (carId) => request.remove(`${baseUrl}/${carId}`);
+export const remove = async (carId) =>  await request.del(`${baseUrl}/${carId}`);

@@ -7,7 +7,8 @@ export default function Create () {
     const createCarSubmitHandler = async (e) => {
         e.preventDefault();
 
-        const carData = Object.entries(new FormData(e.currentTarget));
+        const carData = Object.fromEntries(new FormData(e.currentTarget));
+        console.log(carData)
 
         try {
             await carService.create(carData)

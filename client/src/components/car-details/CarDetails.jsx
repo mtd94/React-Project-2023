@@ -1,13 +1,12 @@
-import { useContext, useEffect, useReducer, useState, useMemo } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import * as carService from '../../services/carService';
 import AuthContext from "../../context/authContext";
-import useForm from '../../hooks/form';
 
-export default function CarDetails() {
+export default function GameDetails() {
     const navigate = useNavigate();
-    const { email, userId } = useContext(AuthContext);
+    const {userId } = useContext(AuthContext);
     const [car, setCar] = useState({});
     const { carId } = useParams();
 
@@ -15,9 +14,12 @@ export default function CarDetails() {
         carService.getOne(carId)
             .then(setCar);
 
+        
+    }, [carId]);
+
 
     const deleteButtonClickHandler = async () => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${car.title}`);
+        const hasConfirmed = confirm(`Are you sure you want to delete ${car.model}`);
 
         if (hasConfirmed) {
             await carService.remove(carId);
@@ -25,24 +27,24 @@ export default function CarDetails() {
             navigate('/catalog');
         }
     }
+    
     return (
         <section id="car-details">
-            <h1>car Details</h1>
-            <div className="info-section">
-                <div className="car-header">
-                    <img className="car-img" src={car.imageUrl} alt={car.model} />
-                    <h1>{car.model}</h1>
+            <h1>Car Details</h1>
+                    <img className="car-img" src={car.imageUrl} />
+                    <h1>Model:{car.model}</h1>
+                    <h3>Year:{car.year}</h3>
                     <span className="color">Color: {car.color}</span>
-                    <p className="type">{car.price}</p>
-                </div>
-                </div>
+                    <p className="type">Price:{car.price}</p>
+                
+                
 
-
+                {userId === car._ownerId && (
                     <div className="buttons">
-                        <Link to={('/catalog/:id/edit', { carId })} className="button">Edit</Link>
+                      <Link to={(`/${carId}/edit`)} className="button">Edit</Link>
                         <button className="button" onClick={deleteButtonClickHandler}>Delete</button>
                     </div>
+                )}
         </section>
     )
-    })
 }

@@ -1,5 +1,6 @@
-
 const Search = () => {
+	
+
     return (
 		<nav className="navbar navbar-default midle-nav">
         <div className="navbar-header">
