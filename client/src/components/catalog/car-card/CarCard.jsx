@@ -9,16 +9,18 @@ export default function CarCard  ({
     imageUrl
 }) {
     return(
-    
-        <div className="all-cars">
-            <div className="allcars-info">
-                <img src={imageUrl} />
-                <h1>Model:{model}</h1>
-                <h2>Year:{year}</h2>
-                <h2>Color:{color}</h2>
-                <h2>Price:{price}$</h2>
-                <button><Link to={`/catalog/${_id}/details`} className="details-button">Details</Link></button>
-            </div>
-        </div>
+        <div class="container">
+ <div class="wrapper">
+   <img src={imageUrl} width={400} height={300}></img>
+   <h1> {model}</h1>
+   <p>Lorem ipsum dolor sit amet, <br/>
+     consectetur adipiscing elit.</p>
+  </div>
+  <div class="button-wrapper"> 
+  <Link to={`/catalog/${_id}/details`}><button class="btn outline">DETAILS</button></Link>
+    <button class="btn fill">BUY NOW</button>
+  </div>
+    </div>
+
     )
 }

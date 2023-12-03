@@ -31,7 +31,7 @@ export default function GameDetails() {
     return (
         <section id="car-details">
             <h1>Car Details</h1>
-                    <img className="car-img" src={car.imageUrl} />
+                    <img className="car-img" src={car.imageUrl} width={400} height={300}/>
                     <h1>Model:{car.model}</h1>
                     <h3>Year:{car.year}</h3>
                     <span className="color">Color: {car.color}</span>
@@ -41,7 +41,7 @@ export default function GameDetails() {
 
                 {userId === car._ownerId && (
                     <div className="buttons">
-                      <Link to={(`/${carId}/edit`)} className="button">Edit</Link>
+                      <button><a href={(`/${carId}/edit`)} className="button">Edit</a></button>
                         <button className="button" onClick={deleteButtonClickHandler}>Delete</button>
                     </div>
                 )}

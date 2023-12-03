@@ -10,10 +10,10 @@ export default function Header () {
 <div className="allcontain">
 	<div className="header">
 			<ul className="socialicon">
-				<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-				<li><a href="#"><i className="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-				<li><a href="#"><i className="fa fa-pinterest"></i></a></li>
+				<li><a href="https://www.facebook.com/marketplace/category/cars/"><i className="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/usedcars4saleuk?lang=bg/"><i className="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.autopluscarsales.ca/"><i className="fa fa-google-plus"></i></a></li>
+				<li><a href="https://www.pinterest.com/uncrate/cars/"><i className="fa fa-pinterest"></i></a></li>
 			</ul>
 			<ul className="givusacall">
 				<li>Give us a call : +66666666 </li>
