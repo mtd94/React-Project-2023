@@ -1,31 +1,20 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
+export default function CarCard ({_id,model,year,color,price,imageUrl}) {
 
-export default function CarCard  ({
-    _id,
-    model,
-    year,
-    color,
-    price,
-    imageUrl
-}) {
-
- 
 
           return(
-        <div class="container">
- <div class="wrapper">
-   <img src={imageUrl} width={400} height={300}></img>
+        <div className="container">
+ <div className="wrapper">
+                <img src={imageUrl} width={400} height={300} class="center"></img>
    <h1> {model}</h1>
-   <p>Lorem ipsum dolor sit amet, <br/>
-     consectetur adipiscing elit.</p>
+   <h1 class="center">{price}$</h1>
   </div>
-  <div class="button-wrapper"> 
-  <Link to={`/catalog/${_id}/details`}><button class="btn outline">DETAILS</button></Link>
-    <button class="btn fill">BUY NOW</button>
+  <div className="button-wrapper"> 
+  <Link to={`/catalog/${_id}/details`}><button className="btn outline">DETAILS</button></Link>
   </div>
     </div>
 
-    )
+          )
 }

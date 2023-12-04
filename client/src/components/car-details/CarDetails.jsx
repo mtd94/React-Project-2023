@@ -12,7 +12,8 @@ export default function GameDetails() {
 
     useEffect(() => {
         carService.getOne(carId)
-            .then(setCar);
+            .then(setCar).
+            catch(() => error,(error.message))
 
         
     }, [carId]);
@@ -31,11 +32,11 @@ export default function GameDetails() {
     return (
         <section id="car-details">
             <h1>Car Details</h1>
-                    <img className="car-img" src={car.imageUrl} width={400} height={300}/>
+                    <img class="center" src={car.imageUrl} width={500} height={300}/>
                     <h1>Model:{car.model}</h1>
-                    <h3>Year:{car.year}</h3>
-                    <span className="color">Color: {car.color}</span>
-                    <p className="type">Price:{car.price}</p>
+                    <h1>Year:{car.year}</h1>
+                    <h1>Color: {car.color}</h1>
+                    <h1>Price:{car.price}</h1>
 
                 {userId === car._ownerId && (
                     <div className="button-wrapper"> 

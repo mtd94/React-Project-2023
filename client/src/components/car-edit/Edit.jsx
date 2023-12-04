@@ -62,7 +62,7 @@ export default function Edit ()  {
 
                     <label htmlFor="game-img">Image:</label>
                     <input type="text" id="imageUrl" name="imageUrl" value={car.imageUrl} onChange={onChange} placeholder="Upload a photo..." />
-					<input className="btn submit" type="submit" value="Edit Game" />
+					<input className="btn submit" type="submit" value="Save" />
 					</form>
 					</div>
 					</div>

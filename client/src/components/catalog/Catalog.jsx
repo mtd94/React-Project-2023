@@ -10,7 +10,7 @@ export default function CarList() {
         carService.getAll()
             .then(result => setCars(result))
             .catch(err => {
-                console.log(err);
+                console.log(err,err.message);
             });
     }, []);
 

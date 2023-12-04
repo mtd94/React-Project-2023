@@ -11,17 +11,18 @@ export default function Register () {
       <form id="register" onSubmit={onSubmit}>
   <div className="container">
     <h1>Register</h1>
-    <label for="email"><b>Email</b></label>
+
+    <label htmlFor="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" 
 onChange={onChange}
 />
 
-    <label for="psw"><b>Password</b></label>
+    <label htmlFor="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" id="password" 
     onChange={onChange}
     />
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" 
     onChange={onChange}
     />

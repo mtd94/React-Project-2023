@@ -9,12 +9,14 @@ export default function Create () {
 
         const carData = Object.fromEntries(new FormData(e.currentTarget));
 
+
         try {
             await carService.create(carData)
             navigate('/catalog');
-        } catch (err) {
-        console.log(err,err.message)
+        } catch (error) {
+           navigate('/catalog',{ error: error.message });
         }
+        
     }
 
     return (

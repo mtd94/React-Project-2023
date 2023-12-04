@@ -14,9 +14,9 @@ export default function Logout() {
                 logoutHandler();
                 navigate('/');
             })
-            .catch(() => {
+            .catch((err) => {
                 logoutHandler();
-                navigate('/')
+                navigate('/',err,err.message)
             });
     }, []);
 
