@@ -8,7 +8,6 @@ export default function Create () {
         e.preventDefault();
 
         const carData = Object.fromEntries(new FormData(e.currentTarget));
-        console.log(carData)
 
         try {
             await carService.create(carData)

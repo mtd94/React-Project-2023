@@ -36,13 +36,11 @@ export default function GameDetails() {
                     <h3>Year:{car.year}</h3>
                     <span className="color">Color: {car.color}</span>
                     <p className="type">Price:{car.price}</p>
-                
-                
 
                 {userId === car._ownerId && (
-                    <div className="buttons">
-                      <button><a href={(`/${carId}/edit`)} className="button">Edit</a></button>
-                        <button className="button" onClick={deleteButtonClickHandler}>Delete</button>
+                    <div className="button-wrapper"> 
+                      <Link to={`/${carId}/edit`}><button className="btn outline">EDIT</button></Link>
+                        <button className="btn outletline" onClick={deleteButtonClickHandler}>DELETE</button>
                     </div>
                 )}
         </section>

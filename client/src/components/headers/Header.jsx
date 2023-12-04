@@ -48,7 +48,7 @@ export default function Header () {
 				<li><Link to="/">HOME</Link></li>
 				<li><Link to="/catalog">CATALOG </Link></li>
 				{isAuthenticated && (
-				<li><Link to="/search">SEARCH</Link></li>
+				<li><Link to="/profile">PROFILE</Link></li>
 				)}
 				{isAuthenticated && (
 				<li><Link to="/create-car">Create car</Link></li>

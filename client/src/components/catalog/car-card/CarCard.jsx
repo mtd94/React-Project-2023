@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+
 
 export default function CarCard  ({
     _id,
@@ -8,7 +10,10 @@ export default function CarCard  ({
     price,
     imageUrl
 }) {
-    return(
+
+ 
+
+          return(
         <div class="container">
  <div class="wrapper">
    <img src={imageUrl} width={400} height={300}></img>
