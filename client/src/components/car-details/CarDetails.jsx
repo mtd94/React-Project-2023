@@ -13,7 +13,7 @@ export default function GameDetails() {
     useEffect(() => {
         carService.getOne(carId)
             .then(setCar).
-            catch(() => error,(error.message))
+            catch(() =>(error.message))
 
         
     }, [carId]);
