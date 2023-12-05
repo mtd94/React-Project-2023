@@ -6,6 +6,7 @@ import useForm from "../../hooks/form";
 export default function Register () {
   const {registerSubmitHandler} = useContext(AuthContext);
   const { onChange, onSubmit } = useForm(registerSubmitHandler)
+  
 
     return (
       <form id="register" onSubmit={onSubmit}>

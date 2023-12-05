@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { useNavigate } from 'react-router-dom';
 
-import * as authService from '../services/authService';
+import  * as authService from '../services/authService';
 import usePersistedState from "../hooks/usePersistedState";
 
 const AuthContext = createContext();
@@ -13,7 +13,12 @@ export const AuthProvider = ({
     const [auth, setAuth] = usePersistedState('auth', {});
 
     const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email,values.password);
+        let result = {};
+        try {
+         result = await authService.login(values.email,values.password);
+       } catch (error) {
+        return alert(error.message);
+    }
         setAuth(result);
 
         localStorage.setItem('accessToken', result.accessToken);
@@ -22,8 +27,17 @@ export const AuthProvider = ({
     };
 
     const registerSubmitHandler = async (values) => {
-        const result = await authService.register(values.email, values.password);
+        let result = {};
+        
+        try {
+            if (repeatPassword !== password) {
+                throw new Error ("Passwords don't match!")
+            };
 
+         result = await authService.register(values.email, values.password,values.repeatPassword);
+        } catch (error) {
+            return alert(error.message);
+        }
         setAuth(result);
 
         localStorage.setItem('accessToken', result.accessToken);
@@ -48,7 +62,7 @@ export const AuthProvider = ({
 
     return (
         <AuthContext.Provider value={values}>
-            {children}
+         {children}
         </AuthContext.Provider>
     );
 };
