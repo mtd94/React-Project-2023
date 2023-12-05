@@ -1,9 +1,10 @@
 import {Link} from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext from '../../context/authContext'
+import './Header.css'
 
 export default function Header () {
-	const {isAuthenticated,
+	const {isAuthenticated,email
 } = useContext(AuthContext);
 
     return (
@@ -11,12 +12,16 @@ export default function Header () {
 	<div className="header">
 			<ul className="socialicon">
 				<li><a href="https://www.facebook.com/marketplace/category/cars/"><i className="fa fa-facebook"></i></a></li>
-				<li><a href="https://twitter.com/usedcars4saleuk?lang=bg/"><i className="fa fa-twitter"></i></a></li>
-				<li><a href="https://www.autopluscarsales.ca/"><i className="fa fa-google-plus"></i></a></li>
+				<li><a href="https://twitter.com/"><i className="fa fa-twitter"></i></a></li>
 				<li><a href="https://www.pinterest.com/uncrate/cars/"><i className="fa fa-pinterest"></i></a></li>
 			</ul>
 			<ul className="givusacall">
-				<li>Give us a call : +66666666 </li>
+				{!isAuthenticated && (
+					<li>WELCOME,GUEST</li>
+				)}
+				{isAuthenticated && (
+			<li>WELCOME,{email}</li>
+				)}
 			</ul>
 			<ul className="logreg">
 			{!isAuthenticated && (
@@ -50,6 +55,7 @@ export default function Header () {
 				{isAuthenticated && (
 				<li><Link to="/create-car">Create car</Link></li>
 				)}
+				
 			</ul>
 		</div>
 					

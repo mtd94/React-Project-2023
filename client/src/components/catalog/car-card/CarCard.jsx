@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import './Card.css'
+
 
 export default function CarCard ({_id,model,year,color,price,imageUrl}) {
 

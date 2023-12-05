@@ -4,6 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import * as carService from '../../services/carService';
 import AuthContext from "../../context/authContext";
 
+import './Details.css'
+
 export default function GameDetails() {
     const navigate = useNavigate();
     const {userId } = useContext(AuthContext);
