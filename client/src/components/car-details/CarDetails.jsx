@@ -32,20 +32,20 @@ export default function GameDetails() {
     }
     
     return (
-        <section id="car-details">
-            <h1>Car Details</h1>
-                    <img class="center" src={car.imageUrl} width={500} height={300}/>
-                    <h1>Model:{car.model}</h1>
-                    <h1>Year:{car.year}</h1>
-                    <h1>Color: {car.color}</h1>
-                    <h1>Price:{car.price}</h1>
-
+        <div className="container">
+ <div className="wrapper">
+                <img src={car.imageUrl} width={400} height={300} class="center"></img>
+   <h1>Model:{car.model}</h1>
+   <h1 class="center">Year:{car.year}</h1>
+   <h1 class="center">Color:{car.color}</h1>
+   <h1 class="center">Price:{car.price}$</h1>
+  </div>
                 {userId === car._ownerId && (
                     <div className="button-wrapper"> 
                       <Link to={`/${carId}/edit`}><button className="btn outline">EDIT</button></Link>
                         <button className="btn outletline" onClick={deleteButtonClickHandler}>DELETE</button>
                     </div>
                 )}
-        </section>
+        </div>
     )
 }

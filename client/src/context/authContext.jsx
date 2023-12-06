@@ -30,7 +30,7 @@ export const AuthProvider = ({
         let result = {};
         
         try {
-            if (repeatPassword !== password) {
+            if (values.repeatPassword !== values.password) {
                 throw new Error ("Passwords don't match!")
             };
 
