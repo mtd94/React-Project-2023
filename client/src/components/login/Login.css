@@ -9,14 +9,14 @@ form {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #0c0c0c;
     box-sizing: border-box;
   }
   
   /* Set a style for all buttons */
   button {
-    background-color: #04AA6D;
-    color: white;
+    background-color: #1d1f1f;
+    color: rgb(85, 83, 83);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;

@@ -2,6 +2,7 @@ import { useContext,useCallback,useState } from "react";
 
 import AuthContext from "../../context/authContext";
 import useForm from "../../hooks/form";
+import './Register.css'
 
 export default function Register () {
   const {registerSubmitHandler} = useContext(AuthContext);
@@ -52,7 +53,6 @@ const onRepeatPasswordBlur = useCallback(() => {
     <label htmlFor="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" 
 onChange={onChange}
-value={values.email}
 onBlur={onEmailBlur} 
 />
 {errors.requiredEmail && <span style={{color: "red"}}>This field is required</span>}
@@ -61,7 +61,6 @@ onBlur={onEmailBlur}
     <label htmlFor="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" id="password" 
     onChange={onChange}
-    value={values.password}
 onBlur={onPasswordBlur} 
     />
     {errors.requiredPassword && <span style={{color: "red"}}>This field is required</span>}
@@ -69,7 +68,6 @@ onBlur={onPasswordBlur}
     <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="repeatPassword" id="repeatPassword" 
     onChange={onChange}
-    value={values.repeatPassword}
 onBlur={onRepeatPasswordBlur} 
     />
    {errors.requiredRepeatPassword && <span style={{color: "red"}}>This field is required</span>} 
