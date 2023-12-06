@@ -13,6 +13,7 @@ import Login from './components/login/Login';
 import Logout from './components/logout/Logout';
 import Footer from './components/footer/Footer';
 import NotFound from './components/not-found-404/NotFound';
+import AuthGuard from './components/guards/AuthGuard';
 
 
 function App() {
@@ -28,13 +29,15 @@ function App() {
 
     <Route path="/" element={<Home/>} />
     <Route path="/catalog" element={<Catalog/>} />
-    <Route path="/create-car" element={<Create/>} />
     <Route path="/login" element={<Login/>} />
     <Route path="/register" element={<Register/>} />
-    <Route path='/logout' element={<Logout/>} />
     <Route path="/catalog/:carId/details" element={<CarDetails />} />
-   <Route path="/:carId/edit" element={<Edit />} />
     <Route path="*" element={<NotFound/>} />
+    <Route element={<AuthGuard />}>
+    <Route path='/logout' element={<Logout/>} />
+    <Route path="/create-car" element={<Create/>} />
+    <Route path="/:carId/edit" element={<Edit />} />
+    </Route>
     
     
 
